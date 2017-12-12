@@ -1,0 +1,29 @@
+//背景图片
+bg($url)
+    background url($url + "@2x.png")  no-repeat center/contain
+    @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio:3)
+        background url($url + "@3x.png")  no-repeat center/contain
+
+//设置字体大小
+fs($size)
+    font-size: ($size)px
+    @media screen and (min-width:375px) and (max-width 414px)
+        font-size: ($size+1)px
+    @media screen and (min-width:414px)
+        font-size: ($size+2)px
+    
+//设置行高
+lh($size)
+    line-height:($size)px
+    @media screen and (min-width:375px) and (max-width 414px)
+        line-height: ($size+1)px
+    @media screen and (min-width:414px)
+        line-height: ($size+2)px
+
+//设置高度
+he($size)
+    height:($size)px
+    @media screen and (min-width:375px) and (max-width 414px)
+        height: ($size+1)px
+    @media screen and (min-width:414px)
+        height: ($size+2)px
